@@ -1,173 +1,196 @@
 +--------+-------+------------------------------------------------------------------------+
 | Semana | Dia   | Atividade                                                              |
 +========+=======+========================================================================+
-|    1   | 09/03 | Início das aulas – Apresentação do curso                               |
+|    1   | 17/08 | Início das aulas – Apresentação do curso                               |
 |        |       |                                                                        |
-|        |       | * Jogos e simulações                                                   |
 |        |       | * Linguagens e tecnologias adotadas                                    |
+|        |       | * Métodos de avaliação                                                 |
+|        |       | * Materiais suplementares                                              |
 |        |       | * Tutorial Flappy Bird (https://github.com/pyladiesdf/flappy-tutorial) |
 |        +-------+------------------------------------------------------------------------+
-|        | 13/03 | Introdução ao Python                                                   |
+|        | 21/08 | Introdução ao Python                                                   |
 |        |       |                                                                        |
 |        |       | * Variaveis e tipos básicos                                            |
 |        |       | * Comandos básicos (if/for/while/def)                                  |
-|        |       | * Ferramentas de programação                                           |
-|        |       | * REPL                                                                 |
+|        |       | * Jupyter e Google Colab                                               |
+|        |       | * Check.io                                                             |
 +--------+-------+------------------------------------------------------------------------+
-|    2   | 16/03 | Estruturas de dados em Python                                          |
+|    2   | 24/08 | Tipos de dados I                                                       |
 |        |       |                                                                        |
+|        |       | * Números e booleanos                                                  |
 |        |       | * Strings                                                              |
+|        +-------+------------------------------------------------------------------------+
+|        | 28/08 | Tipos de dados II                                                      |
+|        |       |                                                                        |
 |        |       | * Listas e sequências                                                  |
 |        |       | * Dicionários                                                          |
++--------+-------+------------------------------------------------------------------------+
+|    3   | 31/08 | Funções I                                                              |
+|        |       |                                                                        |
+|        |       | * Definindo funções                                                    |
+|        |       | * Argumentos opcionais                                                 |
+|        |       | * Funções de segunda ordem                                             |
 |        +-------+------------------------------------------------------------------------+
-|        | 20/03 | Funções                                                                |
+|        | 04/09 | Funções II                                                             |
 |        |       |                                                                        |
 |        |       | * Funções variádicas                                                   |
-|        |       | * Lambdas e funções de segunda ordem                                   |
-|        |       | * Closures e fábricas de funções                                       |
-|        |       | * Recursão                                                             |
+|        |       | * Criando funções dentro de funções                                    |
+|        |       | * Decoradores                                                          |
 +--------+-------+------------------------------------------------------------------------+
-|    3   | 23/03 | Orientação a objetos                                                   |
-|        |       |                                                                        |
-|        |       | * Definindo classes                                                    |
-|        |       | * Métodos mágicos                                                      |
-|        |       | * Herança e reaproveitamento de código                                 |
+|    4   | 07/09 | *Feriado: Independência*                                               |
 |        +-------+------------------------------------------------------------------------+
-|        | 27/03 | Flappy Bird                                                            |
+|        | 11/09 | Classes                                                                |
 |        |       |                                                                        |
-|        |       | * Organizando código com classes                                       |
-|        |       | * Arquitetura básica de um jogo                                        |
+|        |       | * Criando classes                                                      |
+|        |       | * Herança simples                                                      |
+|        |       | * Métodos especiais                                                    |
+|        |       | * Modelando entidades de um Jogo                                       |
 +--------+-------+------------------------------------------------------------------------+
-|    4   | 30/03 | Flappy Bird Physics                                                    |
+|    5   | 14/09 | Pyxel                                                                  |
 |        |       |                                                                        |
-|        |       | * Isolando o motor de física                                           |
-|        |       | * Corpos e espaço                                                      |
-|        |       | * Resolução de forças                                                  |
+|        |       | * API básica e princípios de funcionamento                             |
+|        |       | * Loop principal                                                       |
+|        |       | * Animações e simulações interativas                                   |
 |        +-------+------------------------------------------------------------------------+
-|        | 03/04 | Flappy Engine                                                          |
+|        | 18/09 | Mini-motor de física: simulando forças                                 |
 |        |       |                                                                        |
-|        |       | * Detecção de colisões                                                 |
-|        |       | * Resolução de colisões simples                                        |
+|        |       | * Resolução de forças simples                                          |
+|        |       | * Física de partículas                                                 |
+|        |       | * Objetos de jogo                                                      |
+|        |       | * Mundo da simulação                                                   |
++--------+-------+------------------------------------------------------------------------+
+|    6   | 21/09 | Mini-motor de física: colisões                                         |
+|        |       |                                                                        |
+|        |       | * Detecção de colisões em círculos e AABBs                             |
+|        |       | * Resolução de colisões                                                |
 |        |       | * Eventos de jogo                                                      |
-+--------+-------+------------------------------------------------------------------------+
-|    5   | 06/04 | Pong                                                                   |
+|        +-------+------------------------------------------------------------------------+
+|        | 25/09 | Pong                                                                   |
 |        |       |                                                                        |
 |        |       | * Implementação na Flappy Engine                                       |
 |        |       | * Física básica e sensores de colisão                                  |
 |        |       | * Problemas com a Flappy Engine                                        |
-|        +-------+------------------------------------------------------------------------+
-|        | 10/04 | *Feriado: Paixão de Cristo (Opcional)*                                 |
 +--------+-------+------------------------------------------------------------------------+
-|    6   | 13/04 | Pong+                                                                  |
+|    7   | 28/09 | Vetores                                                                |
 |        |       |                                                                        |
-|        |       | * Reimplementando usando Pymunk                                        |
-|        |       | * Problemas com a física "real"                                        |
+|        |       | * Definições e operações básicas                                       |
+|        |       | * Interpretação geométrica                                             |
+|        |       | * Produto escalar e vetorial                                           |
+|        |       | * Representando vetores no computador                                  |
 |        +-------+------------------------------------------------------------------------+
-|        | 17/04 | Modelos físicos simples                                                |
+|        | 02/10 | Matrizes                                                               |
+|        |       |                                                                        |
+|        |       | * Transformações matriciais e rotações                                 |
+|        |       | * Operações com matrizes                                               |
+|        |       | * Representando matrizes no computador                                 |
++--------+-------+------------------------------------------------------------------------+
+|    8   | 05/10 | Álgebra linear                                                         |
+|        |       |                                                                        |
+|        |       | * Visualizando transformações lineares                                 |
+|        |       | * Transformações afins e de similaridade                               |
+|        +-------+------------------------------------------------------------------------+
+|        | 09/10 | Modelos físicos simples                                                |
 |        |       |                                                                        |
 |        |       | * Movimento retilíneo uniforme                                         |
 |        |       | * Movimento uniformemente acelerado                                    |
 |        |       | * Oscilador harmônico                                                  |
 |        |       | * Forças centrais e gravitacionais                                     |
 +--------+-------+------------------------------------------------------------------------+
-|    7   | 20/04 | *Feriado: Tiradentes*                                                  |
+|    9   | 12/10 | *Feriado: Nossa Senhora*                                               |
 |        +-------+------------------------------------------------------------------------+
-|        | 24/04 | Modelos com colisão                                                    |
+|        | 16/10 | Modelos dissipativos                                                   |
+|        |       |                                                                        |
+|        |       | * Força viscosa                                                        |
+|        |       | * Arrasto aerodinâmico                                                 |
+|        |       | * Atrito                                                               |
++--------+-------+------------------------------------------------------------------------+
+|   10   | 19/10 | Introdução ao Pymunk                                                   |
+|        |       |                                                                        |
+|        |       | * Reimplementando Pong usando Pymunk                                   |
+|        |       | * Problemas com a física "real"                                        |
+|        +-------+------------------------------------------------------------------------+
+|        | 23/10 | Modelos com colisão                                                    |
 |        |       |                                                                        |
 |        |       | * Colisão entre duas partículas                                        |
 |        |       | * Coeficiente de restituição                                           |
 |        |       | * Leis de conservação                                                  |
 +--------+-------+------------------------------------------------------------------------+
-|    8   | 27/04 | Modelos dissipativos                                                   |
-|        |       |                                                                        |
-|        |       | * Força viscosa                                                        |
-|        |       | * Arrasto aerodinâmico                                                 |
-|        |       | * Atrito                                                               |
-|        +-------+------------------------------------------------------------------------+
-|        | 01/05 | *Feriado: Dia do trabalho*                                             |
-+--------+-------+------------------------------------------------------------------------+
-|    9   | 04/05 | Gás de partículas                                                      |
+|   11   | 26/10 | Gás de partículas                                                      |
 |        |       |                                                                        |
 |        |       | * Leis de conservação                                                  |
 |        |       | * Distribuição de velocidades                                          |
 |        |       | * Relações termodinâmicas                                              |
 |        +-------+------------------------------------------------------------------------+
-|        | 08/05 | Vetores                                                                |
-|        |       |                                                                        |
-|        |       | * Definições e operações básicas                                       |
-|        |       | * Interpretação geométrica                                             |
-|        |       | * Produto escalar e vetorial                                           |
-|        |       | * Representando vetores no computador                                  |
-+--------+-------+------------------------------------------------------------------------+
-|   10   | 11/05 | Matrizes                                                               |
-|        |       |                                                                        |
-|        |       | * Transformações matriciais e rotações                                 |
-|        |       | * Operações com matrizes                                               |
-|        |       | * Representando matrizes no computador                                 |
-|        +-------+------------------------------------------------------------------------+
-|        | 15/05 | Álgebra linear                                                         |
-|        |       |                                                                        |
-|        |       | * Visualizando transformações lineares                                 |
-|        |       | * Transformações afins e de similaridade                               |
-+--------+-------+------------------------------------------------------------------------+
-|   11   | 18/05 | Leis de Newton na forma vetorial                                       |
+|        | 30/10 | Leis de Newton na forma vetorial                                       |
 |        |       |                                                                        |
 |        |       | * Posição, velocidade, força                                           |
 |        |       | * Enunciado das 3 leis na forma vetorial                               |
 |        |       | * Impulso                                                              |
++--------+-------+------------------------------------------------------------------------+
+|   12   | 02/11 | *Feriado: Finados*                                                     |
 |        +-------+------------------------------------------------------------------------+
-|        | 22/05 | Corpos rígidos                                                         |
+|        | 06/11 | Corpos rígidos                                                         |
 |        |       |                                                                        |
 |        |       | * Centro de massa                                                      |
 |        |       | * Momento de inércia                                                   |
 |        |       | * Energia de rotação                                                   |
 +--------+-------+------------------------------------------------------------------------+
-|   12   | 25/05 | Leis de Newton na forma angular                                        |
+|   13   | 09/11 | Leis de Newton na forma angular                                        |
 |        |       |                                                                        |
 |        |       | * Momento angular                                                      |
 |        |       | * Torque                                                               |
 |        |       | * Impulso angular                                                      |
 |        +-------+------------------------------------------------------------------------+
-|        | 29/05 | Vínculos entre objetos                                                 |
+|        | 13/11 | Vínculos entre objetos                                                 |
 |        |       |                                                                        |
 |        |       | * Forças explícitas vs forças implícitas                               |
 |        |       | * Colisões como vínculos                                               |
 |        |       | * Tipos comuns de vínculos                                             |
 |        |       | * Vínculos na Pymunk                                                   |
 +--------+-------+------------------------------------------------------------------------+
-|   13   | 01/06 | Máquinas de Rube Goldberg                                              |
+|   14   | 16/11 | Vínculos na Pymunk                                                     |
+|        |       |                                                                        |
+|        |       | * Distâncias fixas e pontos de pivotamento                             |
+|        |       | * Molas                                                                |
+|        |       | * Motores e engrenagens                                                |
+|        +-------+------------------------------------------------------------------------+
+|        | 20/11 | Máquinas de Rube Goldberg                                              |
+|        |       |                                                                        |
+|        |       | * Plataformas e caminhos                                               |
+|        |       | * Mecanismos móveis e vínculos                                         |
+|        |       | * Motores                                                              |
++--------+-------+------------------------------------------------------------------------+
+|   15   | 23/11 | Máquinas de Rube Goldberg                                              |
 |        |       |                                                                        |
 |        |       | * Plataformas e caminhos                                               |
 |        |       | * Mecanismos móveis e vínculos                                         |
 |        |       | * Motores                                                              |
 |        +-------+------------------------------------------------------------------------+
-|        | 05/06 | Teorema dos eixos separadores                                          |
+|        | 27/11 | Teorema dos eixos separadores                                          |
 |        |       |                                                                        |
 |        |       | * Aplicações a pares de figuras geométricas                            |
 |        |       | * Aproximações de figuras geométricas                                  |
 +--------+-------+------------------------------------------------------------------------+
-|   14   | 08/06 | Resolução de colisões                                                  |
+|   16   | 30/11 | Resolução de colisões                                                  |
 |        |       |                                                                        |
 |        |       | * Direção normal e pontos de contato                                   |
 |        |       | * Resolução de colisões em 2D                                          |
 |        +-------+------------------------------------------------------------------------+
-|        | 12/06 | *Feriado: Corpus Cristi (Opcional)*                                    |
-+--------+-------+------------------------------------------------------------------------+
-|   15   | 15/06 | Sistemas auto-gravitantes                                              |
+|        | 04/12 | Sistemas auto-gravitantes                                              |
 |        |       |                                                                        |
 |        |       | * Gravidade na forma vetorial                                          |
 |        |       | * Estabilidade numérica e suavização                                   |
 |        |       | * Conservação da energia                                               |
-|        +-------+------------------------------------------------------------------------+
-|        | 19/06 | Forças conservativas                                                   |
++--------+-------+------------------------------------------------------------------------+
+|   17   | 07/12 | Forças conservativas                                                   |
 |        |       |                                                                        |
 |        |       | * Energia potencial e força                                            |
 |        |       | * Cálculo de gradiente                                                 |
 |        |       | * Aproximando forças reais                                             |
-+--------+-------+------------------------------------------------------------------------+
-|   16   | 22/06 | Prova Final                                                            |
 |        +-------+------------------------------------------------------------------------+
-|        | 26/06 | *Não haverá aula*                                                      |
+|        | 11/12 | Prova Final                                                            |
 +--------+-------+------------------------------------------------------------------------+
-|   17   | 29/06 | Revisão de notas                                                       |
+|   18   | 14/12 | *Não haverá aula*                                                      |
+|        +-------+------------------------------------------------------------------------+
+|        | 18/12 | Revisão de notas                                                       |
 +--------+-------+------------------------------------------------------------------------+

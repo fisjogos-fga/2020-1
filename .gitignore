@@ -1,1 +1,4 @@
 .vscode/
+.idea
+videos/tmp
+notebooks/videos/tmp

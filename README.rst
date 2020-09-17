@@ -38,8 +38,9 @@ Ementa
 * Modelos de força
 * Modelando fisicamente a interação com o usuário
 * Rotações em 2D
-* Resposta impulsiva a colisões
 * Detecção de superposição
+* Resposta impulsiva a colisões 
+* Motores de jogos e física
 
 
 Horário das aulas e atendimento
@@ -84,11 +85,11 @@ confirmadas.
 é feita segundo as regras abaixo:
 
 * **SR:** Reprovação por faltas 
-* **II:** Falhou em mais de 50% das competências básicas
-* **MI:** Falhou em menos de 50% das competências básicas 
-* **MM:** Comprovou todas as competências básicas da disciplina
-* **MS:** Comprovou todas competências básicas e 40% das competências avançadas
-* **SS:** Comprovou todas competências básicas e 75% das competências avançadas
+* **II:** Completou menos de 22 competências
+* **MI:** Completou pelo menos 22 competências 
+* **MM:** Comprovou pelo menos 33 das competências básicas da disciplina
+* **MS:** Comprovou pelo menos 33 competências básicas e 44 competências no total
+* **SS:** Comprovou todas competências básicas e pelo menos 7 competências avançadas
 
 
 Avaliação competititva

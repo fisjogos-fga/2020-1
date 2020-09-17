@@ -1,60 +1,73 @@
-Start: 2020-03-09
-End: 2020-07-06
+Start: 2020-08-17
+End: 2020-12-18
 Weekdays: Mon, Fri
 Skip: 
-- 2020-04-10: *Feriado: Paixão de Cristo (Opcional)* 
-- 2020-04-20: *Feriado: Tiradentes*
-- 2020-05-01: *Feriado: Dia do trabalho*
-- 2020-06-12: *Feriado: Corpus Cristi (Opcional)*
+- 2020-09-07: *Feriado: Independência* 
+- 2020-10-12: *Feriado: Nossa Senhora*
+- 2020-11-02: *Feriado: Finados*
+- 2020-11-15: *Feriado: Proclamação da República*
 
 ----------------------------------------------------------
 Início das aulas – Apresentação do curso                  
 
-* Jogos e simulações
 * Linguagens e tecnologias adotadas
+* Métodos de avaliação
+* Materiais suplementares
 * Tutorial Flappy Bird (https://github.com/pyladiesdf/flappy-tutorial)     
 ----------------------------------------------------------
-Introdução ao Python                                       
+Introdução ao Python                                    
 
 * Variaveis e tipos básicos
 * Comandos básicos (if/for/while/def)
-* Ferramentas de programação
-* REPL
+* Jupyter e Google Colab
+* Check.io
 ----------------------------------------------------------
-Estruturas de dados em Python                                       
+Tipos de dados I                                       
 
+* Números e booleanos
 * Strings
+----------------------------------------------------------
+Tipos de dados II                                       
+
 * Listas e sequências
 * Dicionários
 ----------------------------------------------------------
-Funções  
+Funções I  
+
+* Definindo funções
+* Argumentos opcionais
+* Funções de segunda ordem
+----------------------------------------------------------
+Funções II  
 
 * Funções variádicas
-* Lambdas e funções de segunda ordem     
-* Closures e fábricas de funções
-* Recursão
+* Criando funções dentro de funções
+* Decoradores
 ----------------------------------------------------------
-Orientação a objetos     
+Classes                                      
 
-* Definindo classes 
-* Métodos mágicos     
-* Herança e reaproveitamento de código
+* Criando classes
+* Herança simples
+* Métodos especiais
+* Modelando entidades de um Jogo 
 ----------------------------------------------------------
-Flappy Bird                                         
+Pyxel                                      
 
-* Organizando código com classes                                    
-* Arquitetura básica de um jogo
+* API básica e princípios de funcionamento
+* Loop principal
+* Animações e simulações interativas
 ----------------------------------------------------------
-Flappy Bird Physics                                      
+Mini-motor de física: simulando forças                     
 
-* Isolando o motor de física
-* Corpos e espaço
-* Resolução de forças
+* Resolução de forças simples
+* Física de partículas
+* Objetos de jogo 
+* Mundo da simulação
 ----------------------------------------------------------
-Flappy Engine                                      
+Mini-motor de física: colisões                                      
 
-* Detecção de colisões
-* Resolução de colisões simples
+* Detecção de colisões em círculos e AABBs
+* Resolução de colisões
 * Eventos de jogo
 ----------------------------------------------------------
 Pong                                      
@@ -62,36 +75,6 @@ Pong
 * Implementação na Flappy Engine
 * Física básica e sensores de colisão
 * Problemas com a Flappy Engine
-----------------------------------------------------------
-Pong+                                      
-
-* Reimplementando usando Pymunk
-* Problemas com a física "real"
-----------------------------------------------------------
-Modelos físicos simples                                      
-
-* Movimento retilíneo uniforme
-* Movimento uniformemente acelerado
-* Oscilador harmônico
-* Forças centrais e gravitacionais
-----------------------------------------------------------
-Modelos com colisão                           
-
-* Colisão entre duas partículas
-* Coeficiente de restituição
-* Leis de conservação
-----------------------------------------------------------
-Modelos dissipativos                   
-
-* Força viscosa
-* Arrasto aerodinâmico
-* Atrito
-----------------------------------------------------------
-Gás de partículas                   
-
-* Leis de conservação
-* Distribuição de velocidades
-* Relações termodinâmicas
 ----------------------------------------------------------
 Vetores                   
 
@@ -110,6 +93,36 @@ Matrizes
 
 * Visualizando transformações lineares
 * Transformações afins e de similaridade
+----------------------------------------------------------
+Modelos físicos simples                                      
+
+* Movimento retilíneo uniforme
+* Movimento uniformemente acelerado
+* Oscilador harmônico
+* Forças centrais e gravitacionais
+----------------------------------------------------------
+Modelos dissipativos                   
+
+* Força viscosa
+* Arrasto aerodinâmico
+* Atrito
+----------------------------------------------------------
+Introdução ao Pymunk                                      
+
+* Reimplementando Pong usando Pymunk
+* Problemas com a física "real"
+----------------------------------------------------------
+Modelos com colisão                           
+
+* Colisão entre duas partículas
+* Coeficiente de restituição
+* Leis de conservação
+----------------------------------------------------------
+Gás de partículas                   
+
+* Leis de conservação
+* Distribuição de velocidades
+* Relações termodinâmicas
 ----------------------------------------------------------
 Leis de Newton na forma vetorial                   
 
@@ -135,6 +148,18 @@ Vínculos entre objetos
 * Colisões como vínculos
 * Tipos comuns de vínculos
 * Vínculos na Pymunk
+----------------------------------------------------------
+Vínculos na Pymunk
+
+* Distâncias fixas e pontos de pivotamento
+* Molas
+* Motores e engrenagens
+----------------------------------------------------------
+Máquinas de Rube Goldberg
+
+* Plataformas e caminhos
+* Mecanismos móveis e vínculos
+* Motores
 ----------------------------------------------------------
 Máquinas de Rube Goldberg
 
