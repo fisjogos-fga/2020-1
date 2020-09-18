@@ -332,3 +332,13 @@ Projeto de jogos
 ## jogo-arte*: Jogo apresenta arte original de boa qualidade
 * Produziu arte original e de boa qualidade.
 * Arte pode incluir imagens, sons ou músicas.
+
+
+Genérico
+========
+
+## conteudo-arte*: Produziu material com alta qualidade estética/artística
+* Criou material de estudo, ou material para o projeto final com expressão de qualidade artística.
+
+## conteudo-texto*: Produziu material com qualidade literária
+* Criou material de estudo, ou material para o projeto final com ótima qualidade de texto. 
