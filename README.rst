@@ -47,7 +47,7 @@ Horário das aulas e atendimento
 ===============================
 
 Aulas teóricas e de exercícios: segundas e sextas-feiras às 16h
-Atendimento e monitoria: a definir
+Atendimento: realizado de forma assíncrona no grupo de Telegram da disciplina
 
 
 Informações importantes
@@ -57,10 +57,12 @@ Este curso utiliza GitHub + Github Classroom e o Google classroom para gerenciar
 turma é feita através do Google Classroom ou por issues no repositório do Github. Habilite a funcionalidade 
 "Watch" no repositório para receber notificações sobre atualizações.
 
-Google Classroom:
-    http://classroom.google.com/ - Código de inscrição: li6mdyg
 Github:
     https://github.com/fisjogos-fga/2020-1
+Telegram:
+    (oculto, enviado por e-mail)
+Teams:
+    (oculto, disponível no grupo de Telegram)
 
 
 Critérios de avaliação
@@ -92,30 +94,6 @@ confirmadas.
 * **SS:** Comprovou todas competências básicas e pelo menos 7 competências avançadas
 
 
-Avaliação competititva
-----------------------
-
-Apesar da forma usual de avaliação ser baseada em habilidades e competências, existe uma forma alternativa de atingir
-uma menção mínima baseada em um sistema de competição. Várias das atividades para comprovação de competências serão
-executadas em um formato competitivo. Estas atividades serão pontuadas em um formato de "pontos corridos", onde cada
-atividade possui uma pontuação máxima que depende do posicionamento de cada aluno (ou grupo de alunos) na resolução 
-da atividade. As respostas são ordenadas por velocidade de entrega, onde apenas as submissões corretas serão 
-consideradas.
-
-O posicionamento de cada aluno no ranking garante uma *menção mínima*. Lembre-se que o critério de avaliação principal
-é baseado em competências e é como a maior parte dos alunos será avaliada. Temos um número de menções alocadas pelo
-critério competitivo:
-
-* **SS:** 1o ao 3o lugares
-* **MS:** 4o ao 9o lugares 
-* **MM:** 10o ao 16o lugares
-
-A maior parte das atividades de avaliação fornecerá pontos tanto pelo sistema compeetitivo quanto pelo de habilidades
-e competências. O aluno poderá pontuar pelos dois critérios e inclusive o resultado das avaliações competitivas pode
-servir como comprovação de competências.  
-
-
-
 Código de ética e conduta
 -------------------------
 
@@ -134,7 +112,7 @@ O curso utiliza alguns pacotes e ferramentas para os quais cada estudante dever�
 cedo o possível. O curso requer Python 3.6+ com alguns pacotes instalados:
 
 * Pip: Gerenciador de pacotes do Python (sudo apt-get install python3-pip)
-* Jupyter notebook/nteract/Google colab: Ambiente de programação científica (https://nteract.io)
+* Jupyter notebook/nteract/Google colab: Ambiente de programação científica.
 * Lark (pip3 install lark-parser --user): Biblioteca de parsing para Python. (note a **ausência** do sudo no comando!)
 * Docker: cria ambientes completamente isolados para teste e validação (sudo apt-get install docker.io)
 
