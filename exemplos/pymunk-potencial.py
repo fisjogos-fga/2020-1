@@ -4,10 +4,15 @@ import string
 import pymunk
 import pyxel
 import random
+import math
 from math import pi, sqrt
 from input_widget import Input
 
 POT_EXPR = "(x ** 2 + y ** 2) * 0.5"
+FUNCTIONS = vars(math)
+
+def U(x, y): 
+    return eval(POT_EXPR, {"x": x, "y": y, "r": sqrt(x**2 + y**2)}, FUNCTIONS)
 
 
 def init_space():
@@ -44,7 +49,7 @@ def update():
     p = space.player
 
     # Modifica velocidade
-    factor = 1.01
+    factor = 1.05
     if pyxel.btn(pyxel.KEY_UP):
         p.velocity = factor * p.velocity
     if pyxel.btn(pyxel.KEY_DOWN):
@@ -54,16 +59,13 @@ def update():
     x, y = p.position - (120, 90)
     y *= -1
     try:
-        e = 1e-4
-        U = eval(POT_EXPR, {"x": x, "y": y})
-        Ux = eval(POT_EXPR, {"x": x + e, "y": y})
-        Uy = eval(POT_EXPR, {"x": x, "y": y + e})
-        
-        force = (-(Ux - U) / e, +(Uy - U) / e) 
+        e = 0.01
+        Fx = -(U(x + e, y) - U(x, y)) / e
+        Fy = -(U(x, y + e) - U(x, y)) / e
     except Exception as ex:
         print("Error:", ex)
     else:
-        space.player.apply_force_at_world_point(force, space.player.position)
+        space.player.apply_force_at_world_point((Fx, -Fy), space.player.position)
     
     space.step(1/60)
 
@@ -99,12 +101,12 @@ def draw():
     obj = space.player
     K = obj.kinetic_energy
     x, y = obj.position - (120, 90)
-    U = eval(POT_EXPR, {"x": x, "y": -y})
+    y *= -1
     K = obj.mass * obj.velocity.length**2 / 2
     
     pyxel.text(5, 150, f"K: {K:5.1f}", pyxel.COLOR_WHITE)
-    pyxel.text(5, 160, f"U: {U:5.1f}", pyxel.COLOR_WHITE)
-    pyxel.text(5, 170, f"E: {K + U:5.1f}", pyxel.COLOR_WHITE)
+    pyxel.text(5, 160, f"U: {U(x, y):5.1f}", pyxel.COLOR_WHITE)
+    pyxel.text(5, 170, f"E: {K + U(x, y):5.1f}", pyxel.COLOR_WHITE)
 
 
 def group_tri(seq):
