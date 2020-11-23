@@ -98,10 +98,15 @@ class Game(PyxelWorld):
             if has_contact and p.velocity.dot(J.rotated(p.angle)) <= 100:
                 p.apply_impulse_at_local_point(5e4 * J, (0, 0))
 
-        if pyxel.btn(pyxel.KEY_A):
+        if pyxel.btn(pyxel.KEY_W):
             self.camera.zoom(1.01)
-        if pyxel.btn(pyxel.KEY_Z):
+        if pyxel.btn(pyxel.KEY_S):
             self.camera.zoom(1 / 1.01)
+        if pyxel.btn(pyxel.KEY_A):
+            self.camera.rotate(0.1)
+        if pyxel.btn(pyxel.KEY_D):
+            self.camera.rotate(-0.1)
+
 
         J = max(2e3 - p.velocity.length * 10, 0)
         if pyxel.btn(pyxel.KEY_LEFT):

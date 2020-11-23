@@ -3,13 +3,37 @@ from camera import Follow
 from world import PyxelWorld, paint
 import pyxel
 import random
-from pymunk.constraint import GrooveJoint, SimpleMotor, DampedSpring, GearJoint
+from pymunk.constraint import GrooveJoint, SimpleMotor, DampedSpring, GearJoint, PivotJoint, PinJoint, SlideJoint, DampedRotarySpring
 from math import pi, exp
 DEGREES = pi / 180
 
 
+class Cart(Body):
+    def __init__(self, x, y, car, mass=1):
+        super().__init__()
+        self.position = car.position + (x - 25, y)
+        self.wheel = Wheel(-8, -8, self, mass=mass * 0.1, radius=10)
+        self.car = car
+
+        self.shape = Poly(self, [(-20, -8), (35, -8), (-10, 20)], radius=2)
+        self.shape.visible = True
+        self.shape.color = pyxel.COLOR_CYAN 
+        self.shape.mass = mass
+
+    def init(self, space):
+        space.add(self, self.shape)
+        self.wheel.init(space)
+
+        joint = PivotJoint(self, self.car, self.local_to_world((40, -10)))
+        joint.max_force = 200
+        space.add(joint)
+
+        joint = DampedRotarySpring(self, self.car, pi/4, 500, 0)
+        space.add(joint)
+
+
 class Wheel(Body):
-    def __init__(self, x, y, car, mass=1, radius=8, delta=None):
+    def __init__(self, x, y, car, mass=1, radius=8):
         super().__init__()
         self.position = car.position + (x, y)
         self.offset = Vec2d(x, y)
@@ -38,6 +62,11 @@ class Wheel(Body):
                              damping=3)        
         space.add(spring)
 
+        # Atrito
+        joint = DampedRotarySpring(self, self.car, 0, 0, 1)
+        space.add(joint)
+
+
 
 class Car(Body):
     @property
@@ -60,14 +89,22 @@ class Car(Body):
         self.back_wheel = Wheel(-20, -6, self, mass=1/10, radius=12)
         self.motor_wheel = self.back_wheel
 
-        self.gear = 0
-        self.gear_ratios = [1, 2, 3, 5, 7]
+        ref = self
+        self.carts = []
+        for _ in range(1):
+            ref = cart = Cart(-50, 10, ref)
+            self.carts.append(cart)
+
+        self.gear = 1
+        self.gear_ratios = [-1, 1, 2, 3, 5, 7]
 
     def init(self, space):
         space.add(self, self.shape)
         
         self.front_wheel.init(space)
         self.back_wheel.init(space)
+        for cart in self.carts:
+            cart.init(space)
 
         # Motor
         m = self.motor = SimpleMotor(self.motor_wheel, self, 0)
@@ -83,11 +120,11 @@ class Car(Body):
         x = self.rpm / 2000
         force = 2500 * (0.75 * x * exp(-2 * (x - 1)) + 0.25 * exp(-3 * x))
         ratio = self.gear_ratios[self.gear]
-        self.motor.max_force = force / ratio
-        self.motor.rate = -100
+        self.motor.max_force = abs(force / ratio)
+        self.motor.rate = -100 * (1 if ratio > 0 else -1)
 
     def break_(self):
-        self.motor.max_force = 500
+        self.motor.max_force = 2500
         self.motor.rate = 0
 
     def coast(self):
@@ -95,7 +132,7 @@ class Car(Body):
         self.motor.rate = 0
     
     def gear_up(self):
-        self.gear = min(self.gear + 1, 4)
+        self.gear = min(self.gear + 1, len(self.gear_ratios))
 
     def gear_down(self):
         self.gear = max(self.gear - 1, 0)
@@ -153,7 +190,7 @@ def draw():
             b = c.a.local_to_world(c.groove_b)
             w.camera.line(*a, *b, pyxel.COLOR_DARKBLUE)
 
-    pyxel.text(5, 5, f"Gear: {car.gear + 1}", pyxel.COLOR_WHITE)
+    pyxel.text(5, 5, f"Gear: {car.gear}", pyxel.COLOR_WHITE)
     pyxel.text(5, 12, f"Speed: {car.velocity.length:.0f}", pyxel.COLOR_WHITE)
     pyxel.text(5, 19, f"RPM: {car.rpm:.0f}", pyxel.COLOR_WHITE)
     pyxel.text(5, 26, f"Max Speed: {max_speed:.0f}", pyxel.COLOR_WHITE)
@@ -197,8 +234,8 @@ w = VehicleWorld()
 w.space.gravity = (0, -100)
 w.space.damping = 0.95
 
-w.ground(n=75, angle=(-7, 5), step=50)
-car = w.car(50, 30)
+w.ground(n=50, angle=(-15, 0), step=50)
+car = w.car(420, 30)
 
 w.camera.pan(-128, 30)
 w.camera_ctrl = Follow(w.camera, car, margin=50, bias=0.1)

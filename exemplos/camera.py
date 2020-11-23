@@ -1,6 +1,7 @@
 from pymunk import Vec2d
 import pymunk
 import pyxel
+from math import sin, cos
 
 
 class Camera:
@@ -32,10 +33,23 @@ class Camera:
     def mouse_y(self):
         return self.mouse_pos.y
 
-    def __init__(self, x=0, y=0, scale=1.0):
+    @property
+    def angle(self):
+        return self._angle
+
+    @angle.setter
+    def angle(self, value):
+        self._angle = value
+        self._cos = cos(value)
+        self._sin = sin(value)
+
+    def __init__(self, x=0, y=0, scale=1.0, angle=0.0):
         self.x = x
         self.y = y
         self.scale = scale
+        self._angle = angle
+        self._cos = cos(angle)
+        self._sin = sin(angle)
 
     def pan(self, x, y):
         self.x -= x
@@ -44,13 +58,20 @@ class Camera:
     def zoom(self, scale):
         self.scale *= scale
 
+    def rotate(self, angle):
+        self.angle += angle
+
     def transform(self, x, y):
         W = pyxel.width
         H = pyxel.height
         s = self.scale
         x_ = (x - self.x) * s + W / 2
         y_ = H / 2 - (y - self.y) * s
-        return Vec2d(x_ , y_)
+
+        cos, sin = self._cos, self._sin
+        xt = cos * x_ - sin * y_ 
+        yt = sin * x_ + cos * y_
+        return Vec2d(xt, yt)
 
     def inv(self, x, y):
         W = pyxel.width
@@ -114,7 +135,7 @@ class CameraBehavior:
         """
         Override in sub-classes.
         """
-        
+
 class Select:
     def __init__(self, behavior1, behavior2):
         self.behavior1 = behavior1
