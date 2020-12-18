@@ -3,3 +3,4 @@
 videos/tmp
 notebooks/videos/tmp
 notebooks/.ipynb_checkpoints/
+__pycache__

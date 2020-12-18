@@ -1,5 +1,5 @@
 Python
-======
+-======
 
 ## py-flow: Utilizar as estruturas de controle if/elif/else, for e while
 * Condicionais com várias alternativas.
@@ -61,17 +61,17 @@ Python
 Motor de física
 ===============
 
-## ge-body1: Implementar de uma classe que representa partículas
+## ge-body1: Implementar uma classe que representa partículas
 * Implementar propriedades de posição, velocidade e massa.
 * Implementar um integrador simples.
 * Implementar cálculo de grandezas físicas elementares.
 
-## ge-body2: Implementar de uma classe que representa corpos rígidos
+## ge-body2: Implementar uma classe que representa corpos rígidos
 * Incorporar grandezas angulares à classe Body.
 * Integrar equações angulares.
 * Incorporar ponto de aplicação da força aos cálculos de resposta angular.
 
-## ge-body3: Implementar de uma classe que representa alguma figura geométrica
+## ge-body3: Implementar uma classe que representa alguma figura geométrica
 * Realizar cálculos de inércia e massa para figuras geométricas específicas.
 * Testes de colisão entre figuras de mesmo tipo.
 
@@ -83,7 +83,7 @@ Motor de física
 * Implementar broad-phase e narrow phase.
 * Incorporar colisões no loop de atualização da física.
 
-## ge-poly*: Implementar de uma classe que representa polígonos convexos
+## ge-poly*: Implementar uma classe que representa polígonos convexos
 * Realizar cálculos de inércia, massa e testes de validação.
 * Testes de colisão.
 
@@ -260,7 +260,7 @@ Vínculos
 * Parametrização vetorial.
 * Problemas de interseção e entre retas e projeções de segmentos.
 
-## al-vec: Realizar e interpretar o produto vetorial
+## al-vec-prod: Realizar e interpretar o produto vetorial
 * Interpretar o produto vetorial em termo das projeções ortogonais.
 * Compreender o papel da dimensionalidade no produto vetorial.
 * Operacionalizar o produto vetorial e traduzir em código.
